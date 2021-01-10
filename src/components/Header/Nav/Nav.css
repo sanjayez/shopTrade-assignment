@@ -1,0 +1,56 @@
+.navbar {
+  height: 10vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.logo > img {
+  width: 2.5rem;
+  border-radius: 8px;
+}
+
+.nav-list {
+  list-style-type: none;
+  justify-self: center;
+}
+.navbar > * {
+  margin: 0.8rem;
+}
+
+.list-elements a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin: 0 0.8rem;
+}
+
+.helper {
+  justify-self: end;
+  display: flex;
+}
+
+.helper > * {
+  margin: 0 0.8rem;
+}
+
+.search-field {
+  display: flex;
+}
+
+input[type="text"] {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+input[type="text"]::placeholder {
+  font-size: 1rem;
+  padding: 0.4rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}

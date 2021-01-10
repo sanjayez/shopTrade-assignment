@@ -1,0 +1,27 @@
+.banner {
+  height: 10vh;
+  background-image: linear-gradient(to right, #1c1816, #eb4d08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text {
+  text-align: center;
+  color: white;
+  font-weight: 200;
+}
+
+.btn-invite {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 30px;
+  margin-left: 1.4rem;
+  cursor: pointer;
+}
+
+.profile,
+.cart {
+  cursor: pointer;
+}

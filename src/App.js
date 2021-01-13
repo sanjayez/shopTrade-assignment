@@ -11,23 +11,22 @@ function App() {
 
   useEffect(() => {
     async function fetchData(){
-      //Have a try and catch block
+      try{
         const URL = 'https://cdn.shopify.com/s/files/1/0455/2176/4502/files/products.json';
         const response = await fetch(URL);
-        const text = await response.text(); //response.json() throws an error
+        let text = await response.text();
+        text = JSON.parse(text.slice(0, 24363) + text.slice(24364));
         setData(text);
         setLoad(true);
+      }
+      catch(e){
+        console.log(e)
+      }
     }
     fetchData()
   }, [])
 
-  if(data){
-    console.log(data.length);
-    console.log(data[0]);
-  }
-
   return (
-
     <div className="App">
       {load ? <Main data={data} /> : <Load />}
     </div>
